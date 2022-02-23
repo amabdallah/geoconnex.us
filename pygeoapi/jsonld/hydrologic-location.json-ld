@@ -4,12 +4,10 @@
 			"schema": "http://schema.org/",
 			"skos": "https://www.w3.org/TR/skos-reference/",
 			"hyf": "https://www.opengis.net/def/schema/hy_features/hyf/",
-			"gsp": "http://www.opengeospatial.org/standards/geosparql/",
 			"name": "schema:name",
 			"sameAs": "schema:sameAs",
 			"related": "skos:related",
 			"description": "schema:description",
-			"geo": "schema:geo",
 			"image": {
 				"@id": "schema:image",
 				"@type": "@id"
@@ -44,14 +42,5 @@
 			}
 		}
 	],
-	"hyf:HY_HydroLocationType": "hydrometricStation",
-	"geo": {
-		"@type": "schema:GeoCoordinates",
-        "schema:latitude": "{{ data.geometry.coordinates[1] }}",
-		"schema:longitude": "{{ data.geometry.coordinates[0] }}"
-	},
-	"gsp:hasGeometry": {
-		"@type": "gsp:Geometry",
-		"gsp:asWKT": "POINT ({{ data.geometry.coordinates[0] }} {{ data.geometry.coordinates[1] }})"
-	}
+	"hyf:HY_HydroLocationType": "hydrometricStation"
 }
